@@ -9,6 +9,7 @@ var IrcPlugin = function (config) {
         host: config.host,
         nick: config.nick,
         channels: config.channels,
+        prefix: config.prefix,
     };
 
     self.client = new irc.Client(self.config.host, self.config.nick, {
@@ -17,7 +18,7 @@ var IrcPlugin = function (config) {
 
     self.hookStatusChange = function (component, status, violation) {
         self.config.channels.forEach(function (channel) {
-            var msg = "status.redhat.com changed status of component " + component.name + ": " + status;
+            var msg = self.config.prefix + " changed status of component " + component.name + ": " + status;
             console.log('[IRC Plugin] sending irc message: ', msg);
             self.client.say(channel, msg);
         });
