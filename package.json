@@ -1,6 +1,6 @@
 {
   "name": "statuspage-controller-irc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IRC plugin for statuspage-controller",
   "main": "./plugin.js",
   "scripts": {
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/redhataccess/statuspage-controller-irc#readme",
   "dependencies": {
-    "irc": "^0.5.2",
-    "statuspage-controller": "^1.1.3"
+    "irc": "^0.5.2"
   }
 }
