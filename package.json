@@ -1,0 +1,27 @@
+{
+  "name": "statuspage-controller-irc",
+  "version": "1.0.0",
+  "description": "IRC plugin for statuspage-controller",
+  "main": "./plugin.js",
+  "scripts": {
+    "start": "node plugin.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redhataccess/statuspage-controller-irc.git"
+  },
+  "keywords": [
+    "statuspage-controller"
+  ],
+  "author": "Jared Sprague <jared@jaredsprague.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redhataccess/statuspage-controller-irc/issues"
+  },
+  "homepage": "https://github.com/redhataccess/statuspage-controller-irc#readme",
+  "dependencies": {
+    "irc": "^0.5.2",
+    "statuspage-controller": "^1.1.3"
+  }
+}

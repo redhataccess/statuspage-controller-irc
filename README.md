@@ -1,2 +1,2 @@
 # statuspage-controller-irc
-IRC plugin for statuspage-controller
+IRC plugin for [statuspage-controller](https://github.com/redhataccess/statuspage-controller)
