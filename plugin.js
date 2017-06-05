@@ -10,7 +10,7 @@ var IrcPlugin = function (config) {
         nick: config.nick,
         channels: config.channels,
         prefix: config.prefix,
-        duplicate_user: config.duplicate_user || false, // boolean to join if Nick already exists in channel
+        duplicate_nick: config.duplicate_nick || false, // boolean to join if Nick already exists in channel
     };
 
     console.log('[IRC Plugin] connecting to: ', self.config.host, self.config);
@@ -37,7 +37,7 @@ var IrcPlugin = function (config) {
         } else {
             console.error('[IRC Plugin] nick collision detected: ', self.client.nick, self.config.nick);
 
-            if (self.config.duplicate_user) {
+            if (self.config.duplicate_nick) {
                 // this will join channel with a nick with a number appended
                 self.joinChannels();
             }
