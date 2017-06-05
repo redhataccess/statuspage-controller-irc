@@ -18,8 +18,9 @@ var IrcPlugin = function (config) {
 
     self.hookStatusChange = function (component, status, violation) {
         self.config.channels.forEach(function (channel) {
+            //TODO: do something with violation, i.e. output incident id
             var msg = self.config.prefix + " changed status of component " + component.name + ": " + status;
-            console.log('[IRC Plugin] sending irc message: ', msg);
+            console.log('[IRC Plugin] sending irc message: ', msg, channel);
             self.client.say(channel, msg);
         });
     }
